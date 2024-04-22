@@ -18,7 +18,7 @@ import {
   Title,
   TitleGreen,
 } from "./styles";
-import { ListItem } from "./components/ListItem";
+import { ListItem } from "../../components/ListItem";
 
 export default function Home() {
   const [audioURL, setAudioURL] = useState<string>("");
