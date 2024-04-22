@@ -15,6 +15,11 @@ export const Container = styled.div`
   border-radius: 12px 12px 0 0;
   background-color: white;
   color: black;
+
+  @media (max-width: 768px) {
+    height: auto;
+    flex-direction: column;
+  }
 `;
 
 export const Text = styled.p<TextProps>`

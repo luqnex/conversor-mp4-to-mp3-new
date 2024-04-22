@@ -32,13 +32,9 @@ export default function Home() {
     const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd";
     const ffmpeg = ffmpegRef.current;
 
-    console.log("chegou aqui", ffmpeg);
-
     if (!ffmpeg) return;
 
-    ffmpeg.on("log", ({ message }: any) => {
-      console.log("message", message);
-    });
+    ffmpeg.on("log", ({ message }: any) => {});
 
     ffmpeg.on("progress", ({ progress }: any) => {
       setProgressConvert(progress);
@@ -66,8 +62,6 @@ export default function Home() {
     await ffmpeg.exec(["-i", "input.mp4", "-b:a", "192k", "output.mp3"]);
 
     const data = await ffmpeg.readFile("output.mp3");
-
-    console.log(`data`, data);
 
     const url = URL.createObjectURL(new Blob([data], { type: "audio/mp3" }));
 
@@ -138,7 +132,11 @@ export default function Home() {
           {isProgress && (
             <ContainerButton>
               <ProgressBar value={progressConvert} max="1" />
-              <a href={audioURL} download title="download">
+              <a
+                href={audioURL}
+                download={videoInput?.name.replace("mp4", "mp3")}
+                title="download"
+              >
                 <Button disabled={progressConvert < 1}>Download</Button>
               </a>
             </ContainerButton>

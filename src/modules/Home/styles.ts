@@ -22,6 +22,10 @@ export const Container = styled.div`
   background-image: url("/assets/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    padding: 4rem 0.5rem;
+  }
 `;
 
 export const Header = styled.header`
@@ -36,6 +40,10 @@ export const Title = styled.h2`
   font-size: 4rem;
   font-weight: 600;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 export const Text = styled.p`
@@ -62,6 +70,11 @@ export const ContentInput = styled.div`
   padding: 2rem;
 
   border-radius: 12px;
+
+  @media (max-width: 768px) {
+    margin: 3rem 2rem;
+    padding: 1rem;
+  }
 `;
 
 export const ContentDownload = styled.div`
@@ -111,6 +124,11 @@ export const Label = styled.label`
   &:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 1rem;
+  }
 `;
 
 export const DescriptionText = styled.p`
@@ -137,10 +155,19 @@ export const ContainerButton = styled.div`
 
   color: white;
   padding: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const ProgressBar = styled.progress`
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
@@ -161,5 +188,9 @@ export const Button = styled.button`
   &:disabled {
     background-color: gray;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
