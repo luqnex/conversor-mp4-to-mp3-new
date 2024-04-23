@@ -19,12 +19,15 @@ import {
   TitleGreen,
 } from "./styles";
 import { ListItem } from "../../components/ListItem";
+import { Loader } from "@/src/components/Loader";
 
 export default function Home() {
   const [audioURL, setAudioURL] = useState<string>("");
   const [isProgress, setIsProgress] = useState<boolean>(false);
   const [progressConvert, setProgressConvert] = useState<number>(0);
   const [videoInput, setVideoInput] = useState<File | null | undefined>();
+  const [loading, setLoading] = useState(true);
+  const [loaded, setLoaded] = useState(false);
 
   const ffmpegRef = useRef<FFmpeg | null>();
 
@@ -85,6 +88,18 @@ export default function Home() {
   useEffect(() => {
     loadFFMPEG();
   }, []);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 10);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <Container>
