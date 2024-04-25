@@ -1,40 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# pdQuery - pdsoluções
 
-## Getting Started
+<p>Este projeto foi realizado utilizando Next Js, Typescript e styled-components e ffmpeg.wasm para converter video mp4 para mp3 diretamente no browser.</p>
 
-First, run the development server:
+<br />
+
+<br />
+
+<h2>⚙️ Funcionalidades</h2>
+
+<ul>
+    <li>Adicionar um vídeo mp4 e converter para mp3 e realizar o download.</li>
+</ul>
+
+<h2>🔧 Instruções para rodar está aplicação</h2>
+
+<strong>Obs. necessário ter node.js instalado no seu PC/Notebook.</strong>
+
+<p>1° - Clone o repositório utilizando o seu terminal de preferencia</p>
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   git clone https://github.com/luqnex/conversor-mp4-to-mp3-new.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<p>2° - Abra a pasta <strong>conversor-mp4-to-mp3</strong> instale as dependências na pasta e inicie o projeto</p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+   cd conversor-mp4-to-mp3 && yarn && yarn dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h2>🛠️ Bibliotecas / Linguagens</h2>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [NextJs](https://nextjs.org/) - O Next é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript é uma linguagem de programação fortemente tipada que se baseia em JavaScript, oferecendo melhores ferramentas em qualquer escala.
+- [styled-components](https://styled-components.com/) - styled-components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação.
+- [ffmpeg.wasm](https://ffmpegwasm.netlify.app/) - ffmpeg.wasm é uma porta WebAssembly / JavaScript pura do FFmpeg, permitindo gravação, conversão e transmissão de vídeo e áudio diretamente nos navegadores!
