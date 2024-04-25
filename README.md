@@ -1,4 +1,4 @@
-# pdQuery - pdsoluções
+# Conversor mp4 para mp3 com ffmpeg.wasm
 
 <p>Este projeto foi realizado utilizando Next Js, Typescript e styled-components e ffmpeg.wasm para converter video mp4 para mp3 diretamente no browser.</p>
 
